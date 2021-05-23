@@ -1,5 +1,67 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
+import { Context } from "../store/appContext";
+//COMPONENTS
+import Card from "../component/Card";
 
-export const Home = () => <div className="text-center mt-5" />;
+function Home() {
+	const { store, actions } = useContext(Context);
+
+	useEffect(() => {
+		actions.fetchingData("planets");
+		actions.fetchingData("people");
+	}, []);
+	console.log("PEOPLE", store.people);
+	console.log("PLANETS", store.planets);
+	return (
+		<div>
+			<div className="container-fluid">
+				<div className="characters">
+					<h2>Characters</h2>
+					<div className="row">
+						{store.people.map((character, index) => {
+							return (
+								<Card
+									key={index}
+									name={character.name}
+									labelText1={"Gender: "}
+									labelText2={"Eye Color: "}
+									labelText3={"Hair Color: "}
+									text1={character.gender}
+									text2={character.eye_color}
+									text3={character.hair_color}
+									id={index}
+									section="character"
+								/>
+							);
+						})}
+					</div>
+				</div>
+				<div className="container-fluid">
+					<div className="planets">
+						<h2>Planets</h2>
+						<div className="row">
+							{store.planets.map((planets, index) => {
+								return (
+									<Card
+										key={index}
+										name={planets.name}
+										labelText1={"Population: "}
+										labelText2={"Terrain: "}
+										text1={planets.population}
+										text2={planets.terrain}
+										id={index}
+										section="planets"
+									/>
+								);
+							})}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+}
+
+export default Home;
