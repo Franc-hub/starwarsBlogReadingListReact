@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useContext } from "react";
+import { useHistory } from "react-router-dom";
 import { Context } from "../store/appContext";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
@@ -8,9 +9,11 @@ const Card = props => {
 	const [selected, setSelected] = useState({
 		heart: "far fa-heart"
 	});
+	const history = useHistory();
+
 	return (
 		<div>
-			<div className="card">
+			<div className="card px-4">
 				<img
 					src="https://dummyimage.com/400x200/616161/fff"
 					className="card-img-top"
@@ -28,23 +31,30 @@ const Card = props => {
 					<p className="card-text">
 						{props.labelText3} {props.text3}
 					</p>
-					<div className="downButtons">
-						<Link to={"/" + props.section + "/" + props.id} className="btn btn-outline-primary">
-							Learn more!
-						</Link>
-						<button
-							type="button"
-							className="btn btn-outline-warning"
-							id="heart"
-							onClick={() => {
-								actions.addFavorite(props.name);
-							}}>
-							{store.favorite.includes(props.name) ? (
-								<i className="fas fa-heart" />
-							) : (
-								<i className="far fa-heart" />
-							)}
-						</button>
+					<div className="d-flex justify-content-around">
+						<div className="col-md-6 align-items-center">
+							<button
+								type="button"
+								className="btn btn-primary"
+								onClick={() => history.push("/cardsDetails")}>
+								Learn More !
+							</button>
+						</div>
+						<div className="col-md-6 align-items-end">
+							<button
+								type="button"
+								className="btn btn-outline-warning"
+								id="heart"
+								onClick={() => {
+									actions.addFavorite(props.name);
+								}}>
+								{store.favorite.includes(props.name) ? (
+									<i className="fas fa-heart" />
+								) : (
+									<i className="far fa-heart" />
+								)}
+							</button>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
-
+import CardDetails from "./views/CardDetails";
 import Home from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
@@ -24,6 +24,9 @@ const Layout = () => {
 					<Switch>
 						<Route exact path="/">
 							<Home />
+						</Route>
+						<Route exact path="/cardsDetails">
+							<CardDetails />
 						</Route>
 						<Route exact path="/demo">
 							<Demo />
