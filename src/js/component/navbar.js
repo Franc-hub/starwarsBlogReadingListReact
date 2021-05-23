@@ -16,19 +16,30 @@ export const Navbar = () => {
 				</div>
 				<div className="col-md-4" />
 				<div className="col-md-4">
-					<button
-						className="btn btn-primary dropdown-toggle"
-						type="button"
-						onClick={() => setTogggle(!toggle)}
-						Favourites
-					/>
-					{toggle && (
-						<div className="dropdown-container">
-							<ul>
-								<li>ewfwfwwewfw</li>
-							</ul>
+					<div className="dropdown">
+						<a
+							className="btn btn-secondary dropdown-toggle"
+							href="#"
+							role="button"
+							id="dropdownMenuLink"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false">
+							Dropdown link
+						</a>
+
+						<div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+							<a className="dropdown-item" href="#">
+								Action
+							</a>
+							<a className="dropdown-item" href="#">
+								Another action
+							</a>
+							<a className="dropdown-item" href="#">
+								Something else here
+							</a>
 						</div>
-					)}
+					</div>
 				</div>
 			</nav>
 		</>
