@@ -40,7 +40,7 @@ const Card = props => {
 								Learn More !
 							</button>
 						</div>
-						<div className="col-md-6 align-items-end">
+						<div className="col-md-6 text-center">
 							<button
 								type="button"
 								className="btn btn-outline-warning"
