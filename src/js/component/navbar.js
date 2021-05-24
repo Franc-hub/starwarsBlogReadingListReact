@@ -2,8 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Favourites from "../component/Favourites";
+import Search from "../component/Search";
 export const Navbar = () => {
-	const [toggle, setTogggle] = useState(false);
 	const history = useHistory();
 	return (
 		<>
@@ -15,8 +15,10 @@ export const Navbar = () => {
 						onClick={() => history.push("/")}
 					/>
 				</div>
-				<div className="col-md-4" />
-				<div className="col-md-4">
+				<div className="col-md-4 text-center">
+					<Search />
+				</div>
+				<div className="col-md-4 text-center">
 					<Favourites />
 				</div>
 			</nav>

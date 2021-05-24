@@ -9,7 +9,7 @@ const Favourites = () => {
 		<div classNameName="btn-group">
 			<button
 				type="button"
-				className="btn btn-danger dropdown-toggle"
+				className="btn btn-primary dropdown-toggle"
 				data-toggle="dropdown"
 				aria-haspopup="true"
 				aria-expanded="false">
@@ -24,7 +24,7 @@ const Favourites = () => {
 									<span>{favorite}</span>
 									<i
 										id="delete"
-										className="far fa-trash-alt pointer trash"
+										className="far fa-trash-alt pointer trash px-3"
 										onClick={() => {
 											actions.deleteFavorite({ index });
 										}}

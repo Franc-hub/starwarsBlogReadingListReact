@@ -24,7 +24,6 @@ const Card = props => {
 					<p className="card-text">
 						{props.labelText1} {props.text1}
 					</p>
-
 					<p className="card-text">
 						{props.labelText2} {props.text2}
 					</p>
@@ -56,6 +55,7 @@ const Card = props => {
 							</button>
 						</div>
 					</div>
+					op
 				</div>
 			</div>
 		</div>

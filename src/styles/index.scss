@@ -13,3 +13,25 @@ h2{
     color: red;
     padding: 40px 27px;
 }
+
+.footer{
+     position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #f8f9fa;
+   margin-top:5%
+}
+.p-footer{
+    margin-top: 10px;
+}
+
+input{
+    width: 60%;
+    margin-top: 2.25%;
+    border: none;
+    background-color: #f8f9fa;
+}
+input:focus{
+    outline: none;
+}
