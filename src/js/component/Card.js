@@ -35,7 +35,7 @@ const Card = props => {
 							<button
 								type="button"
 								className="btn btn-primary"
-								onClick={() => history.push("/:section/:id")}>
+								onClick={() => history.push("/" + props.section + "/" + props.id)}>
 								Learn More !
 							</button>
 						</div>
@@ -55,7 +55,6 @@ const Card = props => {
 							</button>
 						</div>
 					</div>
-					op
 				</div>
 			</div>
 		</div>
