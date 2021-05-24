@@ -16,7 +16,9 @@ export const Navbar = () => {
 					/>
 				</div>
 				<div className="col-md-4" />
-				<div className="col-md-4" />
+				<div className="col-md-4">
+					<Favourites />
+				</div>
 			</nav>
 		</>
 	);
