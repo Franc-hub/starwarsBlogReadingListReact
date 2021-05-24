@@ -36,7 +36,7 @@ const Card = props => {
 							<button
 								type="button"
 								className="btn btn-primary"
-								onClick={() => history.push("/cardsDetails")}>
+								onClick={() => history.push("/:section/:id")}>
 								Learn More !
 							</button>
 						</div>

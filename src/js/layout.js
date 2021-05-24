@@ -23,9 +23,9 @@ const Layout = () => {
 						<Route exact path="/">
 							<Home />
 						</Route>
-						<Route exact path="/cardsDetails">
+						{/* <Route exact path="/:section/:id">
 							<CardDetails />
-						</Route>
+						</Route> */}
 
 						<Route>
 							<h1>Not found!</h1>
