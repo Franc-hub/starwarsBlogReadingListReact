@@ -21,7 +21,7 @@ const Favourites = () => {
 						store.favorite.map((favorite, index) => {
 							return (
 								<li key={index}>
-									<span>{favorite}</span>
+									<a href="#">{favorite}</a>
 									<i
 										id="delete"
 										className="far fa-trash-alt pointer trash px-3"
