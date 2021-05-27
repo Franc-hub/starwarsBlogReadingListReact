@@ -15,9 +15,7 @@ export const Navbar = () => {
 						onClick={() => history.push("/")}
 					/>
 				</div>
-				<div className="col-md-4 text-center">
-					<Search />
-				</div>
+				<div className="col-md-4 text-center">{/* <Search /> */}</div>
 				<div className="col-md-4 text-center">
 					<Favourites />
 				</div>
