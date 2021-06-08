@@ -4,7 +4,7 @@ import ScrollToTop from "./component/scrollToTop";
 import CardDetails from "./views/CardDetails";
 import Home from "./views/home";
 import injectContext from "./store/appContext";
-
+import Login from "./views/Login";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
@@ -20,6 +20,9 @@ const Layout = () => {
 				<ScrollToTop>
 					<Navbar />
 					<Switch>
+						<Route exact path="/login">
+							<Login />
+						</Route>
 						<Route exact path="/">
 							<Home />
 						</Route>
