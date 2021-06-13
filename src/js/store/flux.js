@@ -3,7 +3,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			people: [],
 			planets: [],
-			favorite: []
+			favorite: [],
+			token: "",
+			user: null
 		},
 		actions: {
 			// Fetching the data with the diferent for planets and characters
@@ -28,6 +30,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const updatedList = [...store.favorite];
 				updatedList.splice(id, 1);
 				setStore({ favorite: [...updatedList] });
+			},
+			setToken: token => {
+				setStore({ token: token });
+			},
+			setUser: user => {
+				setStore({ user: user });
+			},
+
+			getToken: () => {
+				const store = getStore();
+				return store.token;
 			}
 		}
 	};

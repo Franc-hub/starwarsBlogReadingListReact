@@ -1,13 +1,16 @@
 import React, { useState, useContext, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/login.scss";
 const Login = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const { store, actions } = useContext(Context);
+	const history = useHistory();
 	const body = {
 		email: email,
-		password: password
+		password: password,
+		is_logged: true
 	};
 
 	const options = {
@@ -19,9 +22,13 @@ const Login = () => {
 	};
 
 	const SubmitData = () => {
-		fetch("https://3000-tomato-lynx-ge3mdj1p.ws-eu09.gitpod.io/login", options)
+		fetch("https://3000-bronze-cattle-zh1cwm6x.ws-eu09.gitpod.io/login", options)
 			.then(res => res.json())
-			.then(json => console.log(json));
+			.then(json => {
+				actions.setToken(json);
+				history.push("/profile");
+			});
+		//history.push("/home");
 	};
 	return (
 		<>
@@ -50,7 +57,6 @@ const Login = () => {
 			</div>
 		</>
 	);
-	0;
 };
 
 export default Login;

@@ -7,6 +7,7 @@ import injectContext from "./store/appContext";
 import Login from "./views/Login";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import Profile from "./views/Profile";
 
 //create your first component
 const Layout = () => {
@@ -29,7 +30,9 @@ const Layout = () => {
 						<Route exact path="/:section/:id">
 							<CardDetails />
 						</Route>
-
+						<Route exact path="/profile">
+							<Profile />
+						</Route>
 						<Route>
 							<h1>Not found!</h1>
 						</Route>
