@@ -22,13 +22,13 @@ const Login = () => {
 	};
 
 	const SubmitData = () => {
-		fetch("https://3000-bronze-cattle-zh1cwm6x.ws-eu09.gitpod.io/login", options)
+		fetch("https://3000-red-guppy-ahqrp6ft.ws-eu08.gitpod.io/login", options)
 			.then(res => res.json())
 			.then(json => {
-				actions.setToken(json);
+				actions.setToken(json.accessToken);
+				actions.setStorageToken(json.accessToken);
 				history.push("/profile");
 			});
-		//history.push("/home");
 	};
 	return (
 		<>

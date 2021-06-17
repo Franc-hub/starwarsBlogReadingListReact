@@ -4,7 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			people: [],
 			planets: [],
 			favorite: [],
-			token: "",
+			token: null,
 			user: null
 		},
 		actions: {
@@ -41,6 +41,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 			getToken: () => {
 				const store = getStore();
 				return store.token;
+			},
+			getStorageToken: () => {
+				localStorage.getItem("token");
+			},
+			setStorageToken: () => {
+				const store = getStore();
+				localStorage.setItem("token", store.token);
 			}
 		}
 	};
