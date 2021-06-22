@@ -19,7 +19,7 @@ function Home() {
 			<div className="container-fluid">
 				<div className="characters">
 					<h2>Characters</h2>
-					<div className="row">
+					<div className="card-container">
 						{store.people.map((character, index) => {
 							return (
 								<Card
@@ -41,7 +41,7 @@ function Home() {
 				<div className="container-fluid">
 					<div className="planets">
 						<h2>Planets</h2>
-						<div className="row">
+						<div className="card-container">
 							{store.planets.map((planets, index) => {
 								return (
 									<Card

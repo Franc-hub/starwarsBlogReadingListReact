@@ -13,7 +13,7 @@ const Card = props => {
 
 	return (
 		<div>
-			<div className="card px-4">
+			<div className="card mx-4">
 				<img
 					src="https://dummyimage.com/400x200/616161/fff"
 					className="card-img-top"

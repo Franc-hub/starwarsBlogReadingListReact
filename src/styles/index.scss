@@ -36,3 +36,13 @@ input:focus{
 .dropdown-menu{
     margin-left:38%;
 }
+
+.card{
+    width: max-content;
+}
+.card-container{
+
+    overflow-y: scroll; 
+    height: auto;
+    display: flex;
+}
